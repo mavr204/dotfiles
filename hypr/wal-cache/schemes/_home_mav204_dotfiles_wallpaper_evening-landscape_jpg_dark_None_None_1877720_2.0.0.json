@@ -1,0 +1,28 @@
+{
+    "checksum": "b138b65ca3ffd767cc7e395376220cc3",
+    "wallpaper": "/home/mav204/dotfiles/wallpaper/evening-landscape.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#111227",
+        "foreground": "#c3c3c9",
+        "cursor": "#c3c3c9"
+    },
+    "colors": {
+        "color0": "#111227",
+        "color1": "#215493",
+        "color2": "#5B619F",
+        "color3": "#9F74AA",
+        "color4": "#D37DA8",
+        "color5": "#638BC2",
+        "color6": "#F58BA7",
+        "color7": "#c3c3c9",
+        "color8": "#606075",
+        "color9": "#215493",
+        "color10": "#5B619F",
+        "color11": "#9F74AA",
+        "color12": "#D37DA8",
+        "color13": "#638BC2",
+        "color14": "#F58BA7",
+        "color15": "#c3c3c9"
+    }
+}

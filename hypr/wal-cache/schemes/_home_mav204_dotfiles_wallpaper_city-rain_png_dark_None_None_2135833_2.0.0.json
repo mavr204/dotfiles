@@ -1,0 +1,28 @@
+{
+    "checksum": "692e48b36b1bd167488e77ae438973e3",
+    "wallpaper": "/home/mav204/dotfiles/wallpaper/city-rain.png",
+    "alpha": "100",
+    "special": {
+        "background": "#150909",
+        "foreground": "#c4c1c1",
+        "cursor": "#c4c1c1"
+    },
+    "colors": {
+        "color0": "#150909",
+        "color1": "#4B4D50",
+        "color2": "#656669",
+        "color3": "#9E6034",
+        "color4": "#D9A757",
+        "color5": "#797F86",
+        "color6": "#969BA1",
+        "color7": "#c4c1c1",
+        "color8": "#6c5858",
+        "color9": "#4B4D50",
+        "color10": "#656669",
+        "color11": "#9E6034",
+        "color12": "#D9A757",
+        "color13": "#797F86",
+        "color14": "#969BA1",
+        "color15": "#c4c1c1"
+    }
+}

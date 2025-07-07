@@ -1,0 +1,28 @@
+{
+    "checksum": "d7b7e8d4678a5ce671e294e90e9fdb84",
+    "wallpaper": "/home/mav204/dotfiles/wallpaper/Solitary-Glow.png",
+    "alpha": "100",
+    "special": {
+        "background": "#102026",
+        "foreground": "#c3c7c8",
+        "cursor": "#c3c7c8"
+    },
+    "colors": {
+        "color0": "#102026",
+        "color1": "#45585B",
+        "color2": "#495D60",
+        "color3": "#55696C",
+        "color4": "#66787A",
+        "color5": "#B1603C",
+        "color6": "#E78446",
+        "color7": "#c3c7c8",
+        "color8": "#5f7074",
+        "color9": "#45585B",
+        "color10": "#495D60",
+        "color11": "#55696C",
+        "color12": "#66787A",
+        "color13": "#B1603C",
+        "color14": "#E78446",
+        "color15": "#c3c7c8"
+    }
+}

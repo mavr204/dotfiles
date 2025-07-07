@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if pgrep -x "waybar" > /dev/null; then
+    echo "Waybar is running. Killing all instances..."
+    pkill -x waybar
+else
+    echo "Waybar is not running. Starting it..."
+    waybar -c ~/dotfiles/waybar/config -s ~/dotfiles/waybar/style.css &
+fi
+

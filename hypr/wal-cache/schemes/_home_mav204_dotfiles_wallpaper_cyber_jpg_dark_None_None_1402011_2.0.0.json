@@ -1,0 +1,28 @@
+{
+    "checksum": "4242b77d9208de124a0f27b34e9e4432",
+    "wallpaper": "/home/mav204/dotfiles/wallpaper/cyber.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#150f25",
+        "foreground": "#c4c3c8",
+        "cursor": "#c4c3c8"
+    },
+    "colors": {
+        "color0": "#150f25",
+        "color1": "#69329A",
+        "color2": "#5230A7",
+        "color3": "#503ABB",
+        "color4": "#6444B6",
+        "color5": "#6A5BDE",
+        "color6": "#9F47A6",
+        "color7": "#c4c3c8",
+        "color8": "#635f74",
+        "color9": "#69329A",
+        "color10": "#5230A7",
+        "color11": "#503ABB",
+        "color12": "#6444B6",
+        "color13": "#6A5BDE",
+        "color14": "#9F47A6",
+        "color15": "#c4c3c8"
+    }
+}

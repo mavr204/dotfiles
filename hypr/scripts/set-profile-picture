@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pic=$1
+sed -i "s|^\$profile_pic = .*|\$profile_pic = $pic|" $HOME/dotfiles/hypr/hyprlock.conf
+echo "Profile Picture Changed"

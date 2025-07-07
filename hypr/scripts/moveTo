@@ -1,0 +1,19 @@
+#!/bin/bash
+
+target_workspace=$1
+
+current_workspace=$(hyprctl activewindow -j | jq '.workspace.id')
+
+current_window_addresses=$(hyprctl clients -j | jq -r ".[] | select(.workspace.id == $current_workspace) | .address")
+target_window_addresses=$(hyprctl clients -j | jq -r ".[] | select(.workspace.id == $target_workspace) | .address")
+
+
+for address in $current_window_addresses; do
+    hyprctl dispatch movetoworkspacesilent "$target_workspace,address:$address"
+done
+
+for address in $target_window_addresses; do
+    hyprctl dispatch movetoworkspacesilent "$current_workspace,address:$address"
+done
+
+hyprctl dispatch workspace $target_workspace

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $(swaync-client -D) == "true" ]]; then
+    swaync-client -d
+    notify-send "🔕 Do Not Disturb" "DnD Off"
+else
+    notify-send "🔕 Do Not Disturb" "DnD On"
+    sleep 2
+    swaync-client -d 
+fi

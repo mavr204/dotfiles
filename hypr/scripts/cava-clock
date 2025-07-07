@@ -1,0 +1,32 @@
+
+#!/bin/bash
+
+killall cava
+killall clock-rs
+hyprctl dispatch workspace 11
+
+# Clock on the left
+kitty --title clock-rs -e clock-rs &
+sleep 0.5
+hyprctl dispatch focuswindow title:^clock-rs$
+hyprctl dispatch togglefloating
+hyprctl dispatch resizeactive exact 960 1080   # 50% width, full height
+hyprctl dispatch moveactive exact 0 0          # Left side
+
+# Cava on the right
+kitty --title cava -e cava &
+sleep 0.5
+hyprctl dispatch focuswindow title:^cava$
+hyprctl dispatch togglefloating
+hyprctl dispatch resizeactive exact 960 1080   # 50% width, full height
+hyprctl dispatch moveactive exact 960 0        # Right side
+
+hyprctl dispatch  workspaceopt allfloat
+hyprctl dispatch  workspaceopt allfloat
+
+
+~/dotfiles/hypr/scripts/moveTo special:cava
+hyprctl dispatch togglesplit
+hyprctl dispatch resizeactive -0 300
+hyprctl dispatch workspace 1
+clear

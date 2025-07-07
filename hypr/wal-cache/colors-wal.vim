@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/mav204/dotfiles/wallpaper/CUSTOM/abs1.jpg"
+let background = "#0e0c1e"
+let foreground = "#c2c2c6"
+let cursor     = "#c2c2c6"
+
+" Colors
+let color0  = "#0e0c1e"
+let color1  = "#32618A"
+let color2  = "#5C7490"
+let color3  = "#6F8EAA"
+let color4  = "#799CC1"
+let color5  = "#8F99AE"
+let color6  = "#A198A1"
+let color7  = "#c2c2c6"
+let color8  = "#5e5c70"
+let color9  = "#32618A"
+let color10 = "#5C7490"
+let color11 = "#6F8EAA"
+let color12 = "#799CC1"
+let color13 = "#8F99AE"
+let color14 = "#A198A1"
+let color15 = "#c2c2c6"

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+idle_on=$1
+lock_timer=$2
+screen_timer=$3
+suspend_timer=$4
+hypridle_path="$HOME/dotfiles/hypr/hypridle.conf"
+
+if [[ "$(systemctl --user is-active hypridle.service)" == "active" && "$idle_on" == "1" ]]; then
+    echo "Hypridle is already on"
+elif [[ "$(systemctl --user is-active hypridle.service)" == "inactive" && "$idle_on" == "0" ]]; then
+    echo "Hypridle is already off"
+else
+    if [[ "$idle_on" == "1" ]]; then
+        systemctl --user enable --now hypridle.service
+    else
+        systemctl --user disable --now hypridle.service
+    fi
+fi
+
+if [ -z "$lock_timer" ] || [ -z "$screen_timer" ] || [ -z "$suspend_timer" ]; then
+    lock_timer=300
+    screen_timer=420
+    suspend_timer=900
+fi
+
+if [[ $lock_timer -lt 300 ]]; then lock_timer=300; fi
+if [[ $screen_timer -lt 300 ]]; then screen_timer=420; fi
+if [[ $suspend_timer -lt 300 ]]; then suspend_timer=900; fi
+
+sed -i "s|^\$lock_timer = .*|\$lock_timer = $lock_timer|" "$hypridle_path"
+sed -i "s|^\$screen_timer = .*|\$screen_timer = $screen_timer|" "$hypridle_path"
+sed -i "s|^\$suspend_timer = .*|\$suspend_timer = $suspend_timer|" "$hypridle_path"
+
+echo "hypridle: $(systemctl --user is-active hypridle.service)"
+

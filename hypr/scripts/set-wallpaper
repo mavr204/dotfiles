@@ -1,0 +1,26 @@
+
+#!/bin/bash
+
+wal="$1"
+
+# Check if file exists
+if [[ ! -f "$HOME/dotfiles/wallpaper/$wal" ]]; then
+    echo "Wallpaper file not found!"
+    exit 1
+fi
+
+# Update hyprpaper config
+sed -i "s|^\$wallpaper = .*|\$wallpaper = $wal|" "$HOME/dotfiles/hypr/hyprpaper.conf"
+
+# Apply wallpaper with pywal
+wal -i "$HOME/dotfiles/wallpaper/$wal" -n
+
+# Create blurred version
+convert -blur 0x8 "$HOME/dotfiles/wallpaper/$wal" "$HOME/.cache/blurred-wp.png"
+
+# Restart hyprpaper and reload Hyprland
+killall hyprpaper
+hyprctl reload
+clear
+
+echo "Wallpaper Changed"
