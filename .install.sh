@@ -42,6 +42,9 @@ sudo ufw allow 1714:1764/tcp
 sudo systemctl enable --now sshd
 sudo systemctl enable --now tailscaled
 
+# Install graphic Stuff
+sudo pacman -S lib32-mesa lib32-vulkan-icd-loader lib32-libglvnd lib32-gnutls lib32-freetype2 lib32-libx11 lib32-libxcomposite lib32-libxrandr lib32-libxi lib32-zlib lib32-openal lib32-libpulse lib32-alsa-plugins lib32-alsa-lib lib32-libxinerama lib32-libxext lib32-libxdamage lib32-libxxf86vm lib32-libxfixes lib32-glu lib32-sdl2 lib32-gst-plugins-base-libs lib32-vulkan-radeon vulkan-radeon vulkan-tools
+
 # Install yay (AUR helper)
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git
