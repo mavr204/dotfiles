@@ -31,7 +31,7 @@ function link_dotfile() {
 # === package installation steps ===
 
 sudo pacman -Syu && yay -Syu
-sudo pacman -S --noconfirm alacritty cava fastfetch hyprland starship neovim wofi waybar swaync hyprlock hyprcursor hyprpaper git nautilus rsync kitty figlet hypridle imagemagick eza brightnessctl libnotify pavucontrol bluez bluez-utils blueman pipewire pipewire-pulse pipewire-alsa wireplumber alsa-utils playerctl gnome-keyring ufw seahorse tailscale ssh kdeconnect lutris python3 jdk-openjdk gcc vlc git thunar ffmpegthumbnailer poppler-glib libopenraw less
+sudo pacman -S --noconfirm alacritty cava fastfetch hyprland starship neovim wofi waybar swaync hyprlock hyprcursor hyprpaper git nautilus rsync kitty figlet hypridle imagemagick eza brightnessctl libnotify pavucontrol bluez bluez-utils blueman pipewire pipewire-pulse pipewire-alsa wireplumber alsa-utils playerctl gnome-keyring ufw seahorse tailscale ssh kdeconnect lutris python3 jdk-openjdk gcc vlc git thunar ffmpegthumbnailer poppler-glib libopenraw less lib32-mesa
 sudo systemctl enable --now ufw
 sudo ufw enable
 sudo ufw allow 22/tcp
