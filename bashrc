@@ -18,7 +18,7 @@ export GSETTINGS_BACKEND=memory
 host='Redd'
 
 if [ "$(hostname)" == "REDD" ]; then
-    PEER='mav204@100.66.230.126'
+    PEER='mav204@100.71.49.39'
 elif [ "$(hostname)" == "BLU" ]; then
     PEER='mav204@100.95.8.21'
 else
