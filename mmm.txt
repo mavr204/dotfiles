@@ -1,0 +1,20 @@
+from collections import Counter
+
+data = [10, 12, 12, 13, 12, 11, 14, 100]
+
+# Mean
+mean_value = sum(data) / len(data)
+
+# Median
+sorted_data = sorted(data)
+n = len(sorted_data)
+median_value = (sorted_data[n // 2] if n % 2 != 0 else
+                (sorted_data[n // 2 - 1] + sorted_data[n // 2]) / 2)
+
+# Mode
+frequency = Counter(data)
+mode_value = frequency.most_common(1)[0][0]
+
+print("Mean:", mean_value)
+print("Median:", median_value)
+print("Mode:", mode_value)

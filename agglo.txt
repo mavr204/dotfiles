@@ -1,0 +1,37 @@
+import numpy as np
+from scipy.spatial.distance import pdist, squareform
+
+# Sample data
+X = np.array([[1, 2], [1, 4], [1, 0],
+              [10, 2], [10, 4], [10, 0]])
+
+# Initially, each point is its own cluster
+clusters = [[i] for i in range(len(X))]
+
+def compute_distance(c1, c2):
+    # Compute average linkage
+    points1 = X[c1]
+    points2 = X[c2]
+    distances = [np.linalg.norm(p1 - p2) for p1 in points1 for p2 in points2]
+    return np.mean(distances)
+
+while len(clusters) > 2:  # Stop when 2 clusters remain
+    min_dist = float('inf')
+    pair_to_merge = (0, 1)
+    
+    for i in range(len(clusters)):
+        for j in range(i + 1, len(clusters)):
+            dist = compute_distance(clusters[i], clusters[j])
+            if dist < min_dist:
+                min_dist = dist
+                pair_to_merge = (i, j)
+    
+    # Merge clusters
+    new_cluster = clusters[pair_to_merge[0]] + clusters[pair_to_merge[1]]
+    clusters = [c for idx, c in enumerate(clusters) if idx not in pair_to_merge]
+    clusters.append(new_cluster)
+
+print("Final Clusters (Indices):", clusters)
+print("Cluster Data Points:")
+for cluster in clusters:
+    print(X[cluster])

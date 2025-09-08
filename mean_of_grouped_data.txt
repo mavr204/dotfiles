@@ -1,0 +1,11 @@
+# Class intervals and frequencies
+classes = [(0, 10), (10, 20), (20, 30)]
+frequencies = [5, 8, 2]
+
+# Midpoints
+midpoints = [(lower + upper) / 2 for (lower, upper) in classes]
+
+# Mean of grouped data
+mean_grouped = sum(f * m for f, m in zip(frequencies, midpoints)) / sum(frequencies)
+
+print("Grouped Data Mean:", mean_grouped)
